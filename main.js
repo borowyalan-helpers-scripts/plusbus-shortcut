@@ -26,5 +26,5 @@ function buildUrl(evt) {
 }
 
 function redirect(url) {
-	window.location.replace(url);
+	window.location.assign(url);
 }
