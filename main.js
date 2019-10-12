@@ -18,7 +18,10 @@ function buildUrl(evt) {
 	let date = new Date();
 	let year = date.getFullYear();
 	let month = date.getMonth() + 1;
-	let day = "0" + date.getDate();
+	let day = date.getDate();
+	if (day.toString().length < 2) {
+		day = "0" + day;
+	}
 	let formattedDate = `${year}-${month}-${day}`;
 
 	let url = `https://plusbus.pl/search?promotions=3&initial_stop=${initialStop}&final_stop=${finalStop}&from_date=${formattedDate}&to_date=0`;
